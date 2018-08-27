@@ -12,9 +12,9 @@
     <center>
     <div class="Card">
       <div class="input" >
-        <input type="text" name="check" id="textBox">
+        <input type="text" placeholder="add.." name="check" id="textBox">
       </div>
-       <button type="button" onclick="add()">ADD</button>
+       <button class="b" type="button" onclick="add()"><span>ADD</span></button>
        <div id="work">
          <ol id="myList">
   </ol>
@@ -34,9 +34,8 @@
           node.appendChild(textnode);
           document.getElementById("myList").appendChild(node);
         var button = document.createElement("BUTTON");
-          var txt = document.createTextNode("delete");
-        //  button.className = "del";
-        button.appendChild(txt);
+          var txt = document.createTextNode("X");
+          button.appendChild(txt);
         node.appendChild(button);
         button.className='btn';
         button.id= "b";

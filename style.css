@@ -1,18 +1,76 @@
 .Card {
     width: 350px;
-    height: 500px;
+    height: 400px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
     margin: 10px 5px;
     padding: 4px;
-    background-color: #428ff4;
+    background-image: linear-gradient(#1a55af, #929bb7);
+    box-shadow: 0 8px 1px 0 rgba(0,0,0,0.2), 0 6px 8px 0 rgba(0,0,0,0.19);
   }
   p{
     font-size: 25px;
+  }
+  .input{
+    padding: 10px;
+  }
+  #textBox{
+    border: 1px solid #000;
+    font-size:20px;
+  border-radius:10px;
   }
   ol li.uncheck {
 text-decoration:none ;
 }
 ol li.checked{
   text-decoration: line-through;
+}
+.b {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #bc4e38;
+  border: none;
+  color: black;
+  text-align: center;
+  box-shadow: 0 8px 6px 0 rgba(0,0,0,0.2), 0 6px 2px 0 rgba(0,0,0,0.19);
+  font-size: 15px;
+  padding: 5px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  border: 2px solid black;
+}
+
+.b span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.b span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.b:hover span {
+  padding-right: 25px;
+}
+
+.b:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+#work{
+  background-color:#667193;
+}
+.btn{
+    background-color:#827f02 ;
+    color: black;
+    border: 2px solid black;
 }

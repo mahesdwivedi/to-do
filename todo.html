@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <center><h1>TO DO LIST!<h1></center>
+    <title>to do</title>
+
+
+    </head>
+  <body>
+    <center>
+    <div class="Card">
+      <div class="input" >
+        <input type="text" name="check" id="textBox">
+      </div>
+       <button type="button" onclick="add()">ADD</button>
+       <div id="work">
+         <ol id="myList">
+  </ol>
+        </div>
+      </div>
+    </center>
+       <script>
+        let i=0;
+         var btn = document.getElementsByClassName('btn');
+         var check=document.getElementsByClassName('check');
+       function add()
+       {
+         var x = document.getElementById("textBox").value;
+          var node = document.createElement("LI");
+          node.className = "uncheck";
+          var textnode = document.createTextNode(x);
+          node.appendChild(textnode);
+          document.getElementById("myList").appendChild(node);
+        var button = document.createElement("BUTTON");
+          var txt = document.createTextNode("delete");
+        //  button.className = "del";
+        button.appendChild(txt);
+        node.appendChild(button);
+        button.className='btn';
+        button.id= "b";
+        var cb = document.createElement('input');
+        cb.type = 'checkbox';
+        cb.className='check';
+        node.appendChild(cb);
+        // i++;
+        for(i=0;i<btn.length;i++)
+        {
+          btn[i].onclick= function() {
+            var a = this.parentElement;
+            a.style.display ="none";
+          };
+        }
+        for(var j=0;j<check.length;j++)
+        {
+        check[j].onchange = function()
+        {
+        console.log("yes");
+        this.parentElement.classList.toggle('checked');
+
+        };
+        }
+
+        let y = document.getElementById("textBox");
+        y.value = "";
+        // console.log(btn.length);
+       }
+
+</script>
+        <!--<script src="code.js"></script>-->
+  </body>
+</html>

@@ -1,0 +1,18 @@
+.Card {
+    width: 350px;
+    height: 500px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 4px;
+    background-color: #428ff4;
+  }
+  p{
+    font-size: 25px;
+  }
+  ol li.uncheck {
+text-decoration:none ;
+}
+ol li.checked{
+  text-decoration: line-through;
+}
